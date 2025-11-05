@@ -12,21 +12,28 @@ body {
     background-size: cover;
     height: 100vh;
     /* Add flex properties to align left and center vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 h1 {
     font-size: 140px;
     color: white;
+    transform: translateX(-100%);
+    animation-fi11
 }
 
 #heading1 {
     /* Add slide-in animation */
+    animation: slide-right 2s;
     
 }
 
 #heading2 {
     /* Add slide-in animation after delay */
-    
+    animation: slide-right 1s;
+    animation-delay: 2s;
 }
 
 #heading3 {
@@ -37,8 +44,14 @@ h1 {
 .nav {
     height: 60vh;
     /* Position on the right */
+    position: absolute;
+    right: 20px;
+    top: 20%;
 
     /* Use flex properties to space out links */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     /* Add fade-in animation after delay */
     
@@ -54,4 +67,13 @@ h1 {
 
 .nav a:hover {
     /* Add nav link hover effect */
+}
+
+@keyframes silede-rignth {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
 }
