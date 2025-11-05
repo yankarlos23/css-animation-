@@ -1,0 +1,91 @@
+# css-animations
+
+## Learning Target
+- I am learning how to create CSS animations
+
+## Success Criteria
+- I can use ```@keyframes animation-name``` to define an animation
+- I can create animations that use the ```transform``` and ```opacity``` properties
+- I can use ```animation: name duration;``` to apply an animation with a selector
+
+
+
+# Get started
+1. Install Live Server and Go Live to view how the webpage looks with no styling
+2. Follow directions below
+
+## 1. Define animations with ```@keyframes```
+Define values at specific percentages of the animation. You can specify any percentage values for steps in the animation.
+```css
+@keyframes animation-name {
+    0% {
+        /* starting properties */
+    }
+    25% {
+        /* properties after 25% of time as elapsed */
+    }
+    50% {
+        /* properties at 50% */
+    }
+    75% {
+        /* properties at 75% */
+    }
+    100% {
+        /* properties at 100% (the end) */
+    }
+}
+```
+### Common properties to animate
+```css
+background-color:
+color:
+transform: scale() | rotate() | translate() | skew();
+opacity: /* 0 is fully transparent, 1 (or 100%) is fully opaque */
+```
+
+## 2. Apply animation to a selector
+```css
+selector {
+    animation: name duration timing-function;
+}
+```
+For example:
+```css
+img {
+    animation: spin 1s linear;
+}
+```
+You can *optionally* set other properties to control how the animation behaves
+```css
+selector {
+    animation: name duration timing-function;
+    animation-iteration-count: infinite; /* repeat infinitely or a specific number of times */
+    animation-delay: 1s; /* start animation after 1s */
+    animation-fill-mode: forwards; /* The element will keep its ending animation properties */
+}
+
+```
+
+## Transform property
+```css
+selector {
+    transform: translate(x, y) | scale(%) | rotate(deg) | skew(deg, deg);
+}
+```
+
+# Example 1
+1. Make all the ```img``` elements spin
+2. Make the bear move back and forth
+
+# Practice Assignment
+1. Make the elephant "disapper" when clicked (shrink and fade the opacity to 0)
+2. Make the giraffe "dance" when clicked (maybe rotate back and forth while moving up and down a little)
+3. Make the hippo "jump" when clicked (move a little down, then way up and back)
+4. Do something creative with the tiger. See what you can come up with
+
+# Example 2
+Follow along with my example to use animations to make a nice hero section and nav
+1. Use position and flex properties to create a layout for headings and nav
+2. Add slide-in animations to headings
+3. Add fade-in animation to nav
+4. Add hover effect and transition
