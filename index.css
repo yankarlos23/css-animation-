@@ -6,3 +6,58 @@
     flex-wrap: wrap;
     gap: 10px;
 }
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 100%;
+    }
+}
+
+img{
+    animation: spin 2s;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(100px);
+    }
+    66% {
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#bear:active {
+    animation: move 2s;
+    animation-delay: 2s;
+}
+
+@keyframes dance {
+    0% {
+        transform: rotate(0deg) translateY(10px);
+    }
+    33% {
+        transform: rotate(15deg) translateY(0px);
+    }
+    66% {
+        transform: rotate(-15deg) translateY(-10);
+    }
+    100% {
+        transform: rotate(0deg) translateY(10px);
+    }
+}
+
+#giraffe:active {
+    animation: dance 2s;
+    animation-iteration-count: infinite;
+}
